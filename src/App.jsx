@@ -22,6 +22,9 @@ function initPageInteractions() {
   const headerToggleBtn = document.querySelector('.header-toggle');
   const scrollTop = document.querySelector('.scroll-top');
   const contactForm = document.querySelector('.react-contact-form');
+  const preloader = document.querySelector('#preloader');
+
+  preloader?.remove();
 
   function headerToggle() {
     if (!header || !headerToggleBtn) return;
