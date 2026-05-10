@@ -14,7 +14,7 @@ function getCurrentPath() {
 
 function navigate(path) {
   window.history.pushState({}, '', path);
-  window.dispatchEvent(new PopStateEvent('popstate'));
+  window.dispatchEvent(new Event('popstate'));
 }
 
 function initPageInteractions() {
@@ -137,7 +137,13 @@ export default function App() {
       event.preventDefault();
       navigate(url.pathname + url.hash);
       if (url.hash) {
-        setTimeout(() => document.querySelector(url.hash)?.scrollIntoView({ behavior: 'smooth' }), 0);
+        setTimeout(() => {
+          try {
+            document.querySelector(url.hash)?.scrollIntoView({ behavior: 'smooth' });
+          } catch {
+            window.scrollTo({ top: 0 });
+          }
+        }, 0);
       } else {
         window.scrollTo({ top: 0 });
       }
