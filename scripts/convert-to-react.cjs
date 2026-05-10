@@ -68,7 +68,7 @@ const pagesModule = `export const pages = ${JSON.stringify(generatedPages, null,
 fs.mkdirSync(path.join(root, 'src'), { recursive: true });
 fs.writeFileSync(path.join(root, 'src', 'pages.js'), pagesModule);
 
-const app = `import { useEffect, useMemo, useState } from 'react';
+const app = `import React, { useEffect, useMemo, useState } from 'react';
 import { pages } from './pages';
 
 const pageByPath = new Map(pages.map((page) => [page.route, page]));

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { pages } from './pages';
 
 const pageByPath = new Map(pages.map((page) => [page.route, page]));
