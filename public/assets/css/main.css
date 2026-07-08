@@ -2583,6 +2583,64 @@ section {
   min-height: 100%;
 }
 
+.portfolio-lead-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 30px 32px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.96) 48%, rgba(8, 47, 73, 0.95) 100%);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.16);
+  color: #ffffff;
+}
+
+.portfolio-lead-kicker {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-lead-card h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.portfolio-lead-card p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio-lead-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.portfolio-lead-stats span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.portfolio-lead-stats strong {
+  color: #ffffff;
+}
+
 .portfolio-text-card .portfolio-text-card-body {
   display: flex;
   flex-direction: column;
@@ -2618,6 +2676,40 @@ section {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.portfolio-card-note,
+.portfolio-detail-note {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.portfolio-detail-note {
+  margin-top: 18px;
+}
+
+.portfolio-text-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.portfolio-inline-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.18);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.portfolio-inline-link:hover {
+  background: rgba(56, 189, 248, 0.28);
+  color: #ffffff;
+}
+
 .portfolio-placeholder {
   display: flex;
   align-items: center;
@@ -2642,4 +2734,17 @@ section {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.about .content ul li a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 991px) {
+  .portfolio-lead-card {
+    grid-template-columns: 1fr;
+  }
 }

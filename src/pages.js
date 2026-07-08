@@ -39,7 +39,7 @@ const sharedFooter = `
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <div class="copyright text-center">
-        <p>© <span>Copyright</span> <span>All Rights Reserved</span></p>
+        <p>&copy; <span>Copyright</span> <span>All Rights Reserved</span></p>
       </div>
     </div>
   </footer>
@@ -74,6 +74,7 @@ function projectDetailPage(project) {
             <span class="portfolio-placeholder-kicker">${project.role}</span>
             <h2>${project.title}</h2>
             <p>${project.summary}</p>
+            <small class="portfolio-card-note">${project.note || "Project visuals are not available in this repository."}</small>
           </div>
         </div>
       </div>
@@ -83,9 +84,11 @@ function projectDetailPage(project) {
     ? `<li><strong>Website</strong>: <a href="${project.website}" target="_blank" rel="noreferrer">${project.websiteLabel || project.website}</a></li>`
     : "";
 
-  const cta = project.website
+  const websiteCTA = project.website
     ? `<p><a href="${project.website}" target="_blank" rel="noreferrer" class="hero-btn primary">Visit Project</a></p>`
     : "";
+
+  const noteBlock = project.note ? `<p class="portfolio-detail-note">${project.note}</p>` : "";
 
   return pageShell(`
     <div class="page-title dark-background">
@@ -106,7 +109,7 @@ function projectDetailPage(project) {
           ${visualBlock}
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Project Information</h3>
               <ul>
                 <li><strong>Project</strong>: ${project.title}</li>
                 <li><strong>Role</strong>: ${project.role}</li>
@@ -124,7 +127,8 @@ function projectDetailPage(project) {
           <ul>
             ${project.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
           </ul>
-          ${cta}
+          ${noteBlock}
+          ${websiteCTA}
         </div>
       </div>
     </section>
@@ -178,7 +182,7 @@ const projects = [
     role: "PHP Developer",
     focus: "Categories, news, events, polls, media, and public portal",
     stack: "PHP, MySQL, Bootstrap, JavaScript",
-    summary: "Built a news management system with an admin panel for managing categories, news, events, polls, and media, along with a public-facing news portal.",
+    summary: "Built a news management system with an admin panel for managing categories, news, events, polls, and media, alongside a public-facing news portal.",
     bullets: [
       "Created admin tools for content publishing and site updates.",
       "Managed categories, news posts, events, polls, and media assets.",
@@ -217,13 +221,14 @@ const projects = [
     role: "Full Stack Developer",
     focus: "Instant messaging and live communication between users",
     stack: "Laravel, Reverb, PHP, JavaScript",
-    summary: "Built a real-time chat application using Laravel and Reverb, enabling instant messaging and live communication between users.",
+    summary: "Built a real-time chat application using Laravel and Reverb to support instant messaging and live communication between users.",
     bullets: [
-      "Implemented real-time messaging for immediate user interaction.",
-      "Used Laravel Reverb to support live communication features.",
-      "Focused on fast message delivery and reliable conversation updates.",
-      "Structured the app for clear user-to-user interaction flows."
-    ]
+      "Implemented real-time messaging for direct user-to-user conversations.",
+      "Used Laravel Reverb to power live updates and fast message delivery.",
+      "Designed conversation flows for clear, reliable communication.",
+      "Focused on responsiveness and a simple messaging experience."
+    ],
+    note: "No local screenshots for ChatApp were found in this repository."
   },
   {
     route: "/smartkarigar-details",
@@ -231,15 +236,16 @@ const projects = [
     role: "Full Stack Developer",
     focus: "Service listing, booking management, and user-provider communication",
     stack: "Laravel, React JS, PHP, MySQL",
-    summary: "Developed a home services booking platform using Laravel and React JS that allows users to hire professionals such as electricians, plumbers, and technicians through a web and mobile interface.",
+    summary: "Developed a home services booking platform using Laravel and React JS that allows users to hire professionals such as electricians, plumbers, and technicians through web and mobile-friendly interfaces.",
     bullets: [
-      "Created service discovery and booking management workflows.",
-      "Supported user-provider communication inside the platform journey.",
-      "Built for skilled service categories such as electricians, plumbers, and technicians.",
-      "Delivered a practical hiring experience across web and mobile-oriented interfaces."
+      "Built service discovery, booking management, and hiring workflows.",
+      "Supported communication between customers and service providers.",
+      "Covered skilled categories such as electricians, plumbers, and technicians.",
+      "Delivered a practical booking experience across web and mobile-oriented interfaces."
     ],
     website: "https://smartkarigar.com/",
-    websiteLabel: "smartkarigar.com"
+    websiteLabel: "smartkarigar.com",
+    note: "The live project is available, but local screenshots were not found in this repository."
   }
 ];
 
@@ -248,8 +254,8 @@ const homePage = pageShell(`
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <span class="hero-kicker">Full Stack Developer</span>
       <h2>M Awais Raza</h2>
-      <p class="hero-role">I build scalable web applications with <span class="typed" data-typed-items="PHP and Laravel,Node.js and Express.js,React JS,RESTful APIs,Laravel AI SDK"></span></p>
-      <p class="hero-summary">Experienced PHP and Laravel developer with strong expertise in secure, scalable applications, responsive interfaces, REST APIs, and AI-powered features built with clean architecture and maintainable code.</p>
+      <p class="hero-role">I design and build modern digital products with <span class="typed" data-typed-items="PHP and Laravel,Node.js and Express.js,React JS,RESTful APIs,Laravel AI SDK"></span></p>
+      <p class="hero-summary">I am a Full Stack Developer focused on building scalable, secure, and thoughtfully engineered web applications. My work brings together Laravel, Node.js, React JS, RESTful APIs, and AI-powered features to create business products that feel reliable, modern, and built to grow.</p>
       <div class="hero-actions">
         <a href="#portfolio" class="hero-btn primary">View Work</a>
         <a href="#contact" class="hero-btn secondary">Contact Me</a>
@@ -267,27 +273,27 @@ const homePage = pageShell(`
   <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
       <h2>About</h2>
-      <p>Full Stack Developer with hands-on experience building secure and scalable web applications using PHP, Laravel, Node.js, Express.js, React JS, MySQL, MongoDB, and Laravel AI SDK. I enjoy turning business requirements into maintainable products with clean code and responsive user experiences.</p>
+      <p>I am a Full Stack Developer with a strong foundation in PHP, Laravel, Node.js, Express.js, React JS, MySQL, MongoDB, and Laravel AI SDK. I build web applications that balance performance, clean architecture, maintainable code, and polished user experience across business platforms, ERP systems, and modern SaaS-style products.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 content about-content-no-image">
-          <h2>Full Stack Developer - PHP, Laravel, Node.js and React JS</h2>
+          <h2>Building dependable products for business, operations, and digital growth</h2>
           <p class="fst-italic py-3">
-            My experience includes ERP systems, dashboards, e-commerce, news portals, event management, library systems, real-time chat, and service booking platforms. I focus on performance, practical workflows, and maintainable architecture.
+            My experience spans ERP systems, dashboards, e-commerce platforms, news portals, event management systems, library solutions, real-time chat applications, and service booking products. I enjoy shaping backend systems and responsive interfaces that are practical for teams, intuitive for users, and strong enough to support long-term product growth.
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0303-7932504 | 0310-7434370</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Faisalabad, Pakistan</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span>m-awais-raza-7045672a1</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/m-awais-raza-7045672a1" target="_blank" rel="noreferrer">linkedin.com/in/m-awais-raza-7045672a1</a></span></li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>Full Stack Web Applications and ERP Workflows</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>Laravel Applications, ERP Workflows, SaaS Products, and API-driven Systems</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>awaisraza030379@gmail.com</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Urdu, English</span></li>
               </ul>
@@ -301,7 +307,7 @@ const homePage = pageShell(`
   <section id="skills" class="skills section light-background">
     <div class="container section-title" data-aos="fade-up">
       <h2>Skills</h2>
-      <p>Core skills from my CV include PHP and Laravel, Node.js, Express.js, MySQL, MongoDB, JavaScript, React JS, Bootstrap, Tailwind CSS, RESTful APIs, WordPress, Git and GitHub, CI/CD pipelines, Docker, and Laravel AI SDK.</p>
+      <p>Core technologies from my CV include PHP, Laravel, Node.js, Express.js, MySQL, MongoDB, JavaScript, React JS, Bootstrap, Tailwind CSS, RESTful APIs, WordPress, Git, GitHub, CI/CD pipelines, Docker, and Laravel AI SDK.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -358,7 +364,7 @@ const homePage = pageShell(`
   <section id="resume" class="resume section">
     <div class="container section-title" data-aos="fade-up">
       <h2>Resume</h2>
-      <p>Full Stack Developer with experience across Laravel applications, ERP systems, responsive frontends, REST APIs, and AI-powered feature development.</p>
+      <p>Full Stack Developer with professional experience across Laravel applications, ERP systems, responsive frontends, RESTful APIs, AI-powered features, and SaaS-oriented business platforms.</p>
     </div>
 
     <div class="container">
@@ -367,7 +373,7 @@ const homePage = pageShell(`
           <h3 class="resume-title">Summary</h3>
           <div class="resume-item pb-0">
             <h4>M Awais Raza</h4>
-            <p><em>Experienced PHP and Laravel developer with strong expertise in building scalable and secure web applications using PHP and Laravel, Node.js, and Express.js, with front-end experience in JavaScript, React JS, CSS, Bootstrap, and Tailwind CSS.</em></p>
+            <p><em>Experienced PHP and Laravel developer with strong expertise in building scalable and secure web applications using PHP and Laravel, Node.js, and Express.js, supported by frontend experience in JavaScript, React JS, CSS, Bootstrap, and Tailwind CSS, with a focus on performance, clean architecture, and maintainable code.</em></p>
             <ul>
               <li>Faisalabad, Pakistan</li>
               <li>0303-7932504 | 0310-7434370</li>
@@ -387,7 +393,7 @@ const homePage = pageShell(`
             <h4>Web Development</h4>
             <h5>May 2024</h5>
             <p><em>M Salman</em></p>
-            <p>Learned core web development concepts including HTML, CSS, JavaScript, responsive design, and front-end fundamentals for building simple and interactive websites.</p>
+            <p>Learned core web development concepts including HTML, CSS, JavaScript, responsive design, and frontend fundamentals for building simple and interactive websites.</p>
           </div>
         </div>
 
@@ -398,9 +404,9 @@ const homePage = pageShell(`
             <h5>Feb 2025 - Present</h5>
             <p><em>Optimum Tech, Faisalabad</em></p>
             <ul>
-              <li>Handle Wapda City ERP System and mobile app dashboard of Wapda City.</li>
-              <li>Developed Apollo ERP System.</li>
-              <li>Contribute to business workflows, dashboard features, and maintainable Laravel architecture.</li>
+              <li>Support the Wapda City ERP system and mobile app dashboard workflows.</li>
+              <li>Developed the Apollo ERP System for business-focused operations.</li>
+              <li>Contribute to dashboard features, business processes, and maintainable Laravel architecture.</li>
             </ul>
           </div>
           <div class="resume-item">
@@ -409,7 +415,7 @@ const homePage = pageShell(`
             <p><em>WAPEXP Institute of Information Technology</em></p>
             <ul>
               <li>Built dynamic Laravel applications with responsive interfaces and database-backed features.</li>
-              <li>Worked on complete feature delivery, improvements, and project support.</li>
+              <li>Delivered end-to-end features, improvements, and day-to-day project support.</li>
             </ul>
           </div>
 
@@ -418,8 +424,8 @@ const homePage = pageShell(`
             <h4>Achievements</h4>
             <ul>
               <li>PHP and Laravel framework proficiency.</li>
-              <li>Responsive design and dynamic website building.</li>
-              <li>Practical experience across ERP, portals, dashboards, and service platforms.</li>
+              <li>Responsive design and dynamic website development.</li>
+              <li>Practical delivery experience across ERP systems, portals, dashboards, and service platforms.</li>
             </ul>
           </div>
           <div class="resume-item">
@@ -438,17 +444,30 @@ const homePage = pageShell(`
   <section id="portfolio" class="portfolio section light-background">
     <div class="container section-title" data-aos="fade-up">
       <h2>Portfolio</h2>
-      <p>Projects from my CV, covering ERP-related work, commerce, publishing, event operations, library systems, real-time chat, and home services booking.</p>
+      <p>Selected projects from my CV, spanning ERP-oriented product work, commerce, publishing, event operations, library systems, real-time communication, and home services booking.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="portfolio-lead-card">
+        <div>
+          <span class="portfolio-lead-kicker">Selected Work</span>
+          <h3>Applications built around real business workflows</h3>
+          <p>My work covers admin-heavy systems, customer-facing products, and practical full stack delivery using Laravel, React JS, Node.js, and API-driven architecture.</p>
+        </div>
+        <div class="portfolio-lead-stats">
+          <span><strong>6+</strong> Featured projects</span>
+          <span><strong>2</strong> ERP-focused roles</span>
+          <span><strong>Laravel</strong> Core platform</span>
+        </div>
+      </div>
+
       <div class="project-summary-grid">
-        <div class="project-summary-item"><h4>Apollo ERP and Wapda City Work</h4><p>Business dashboard and ERP-oriented development with Laravel.</p></div>
-        <div class="project-summary-item"><h4>E-commerce</h4><p>Product browsing, category management, orders, and checkout.</p></div>
-        <div class="project-summary-item"><h4>News Management</h4><p>Admin panel and public news portal for dynamic publishing.</p></div>
-        <div class="project-summary-item"><h4>Event Management</h4><p>Bookings, planners, volunteers, and user participation workflows.</p></div>
-        <div class="project-summary-item"><h4>Library Management</h4><p>Books, borrowing records, administration, and staff workflows.</p></div>
-        <div class="project-summary-item"><h4>ChatApp and SmartKarigar</h4><p>Real-time communication and services booking experiences.</p></div>
+        <div class="project-summary-item"><h4>Apollo ERP and Wapda City Work</h4><p>Laravel-based business systems, dashboards, and workflow-focused development.</p></div>
+        <div class="project-summary-item"><h4>E-commerce</h4><p>Catalog browsing, product organization, orders, and checkout flows.</p></div>
+        <div class="project-summary-item"><h4>News Management</h4><p>Admin publishing tools with a public-facing content portal.</p></div>
+        <div class="project-summary-item"><h4>Event Management</h4><p>Bookings, planners, volunteers, and user participation management.</p></div>
+        <div class="project-summary-item"><h4>Library Management</h4><p>Borrowing records, catalog administration, and operational tracking.</p></div>
+        <div class="project-summary-item"><h4>ChatApp and SmartKarigar</h4><p>Real-time messaging and services booking product experiences.</p></div>
       </div>
     </div>
 
@@ -519,7 +538,8 @@ const homePage = pageShell(`
               <div class="portfolio-text-card-body">
                 <span class="portfolio-text-tag">Laravel Reverb</span>
                 <h4>ChatApp</h4>
-                <p>Real-time messaging built for instant user communication and live conversations.</p>
+                <p>Real-time messaging experience built for instant user communication and live conversations.</p>
+                <span class="portfolio-card-note">No local screenshots found in this repo yet.</span>
                 <a href="/chatapp-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -530,7 +550,11 @@ const homePage = pageShell(`
               <div class="portfolio-text-card-body">
                 <span class="portfolio-text-tag">Laravel and React JS</span>
                 <h4>Home Services Booking Platform</h4>
-                <p>Users can hire electricians, plumbers, and technicians with booking and communication flows.</p>
+                <p>Users can hire electricians, plumbers, and technicians through service discovery, booking, and communication flows.</p>
+                <div class="portfolio-text-actions">
+                  <a href="https://smartkarigar.com/" target="_blank" rel="noreferrer" class="portfolio-inline-link">Visit Live Site</a>
+                  <span class="portfolio-card-note">Live project available, local screenshots missing.</span>
+                </div>
                 <a href="/smartkarigar-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -543,7 +567,7 @@ const homePage = pageShell(`
   <section id="services" class="services section">
     <div class="container section-title" data-aos="fade-up">
       <h2>Services</h2>
-      <p>I help businesses build reliable web products, admin systems, and responsive interfaces using the same stack highlighted in my CV.</p>
+      <p>I help businesses build reliable web products, SaaS-style platforms, admin systems, APIs, and responsive interfaces using the same stack highlighted in my CV.</p>
     </div>
 
     <div class="container">
@@ -552,21 +576,21 @@ const homePage = pageShell(`
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-code-slash"></i></div>
             <h3>Laravel Development</h3>
-            <p>Secure backend systems, dashboards, ERP modules, admin panels, and API-first development.</p>
+            <p>Secure backend systems, dashboards, ERP modules, admin panels, and application architecture built for long-term maintainability.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-window"></i></div>
             <h3>Frontend Interfaces</h3>
-            <p>Responsive UI with React JS, Bootstrap, Tailwind CSS, and user-friendly interaction flows.</p>
+            <p>Responsive interfaces with React JS, Bootstrap, Tailwind CSS, and user-friendly interaction flows for modern products.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-diagram-3"></i></div>
             <h3>REST APIs and Integrations</h3>
-            <p>Structured backend services, integrations, and maintainable API layers for modern applications.</p>
+            <p>Structured backend services, integrations, and maintainable API layers that support modern web applications.</p>
           </div>
         </div>
       </div>
@@ -576,16 +600,16 @@ const homePage = pageShell(`
   <section id="contact" class="contact section professional-contact">
     <div class="container section-title" data-aos="fade-up">
       <h2>Contact</h2>
-      <p>Available for Laravel, full stack, ERP, dashboard, and product development work.</p>
+      <p>Available for Laravel, full stack, ERP, SaaS, dashboard, and product development opportunities.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="contact-shell">
         <div class="contact-simple-card">
           <div class="contact-simple-content">
-            <span class="contact-kicker">Let's build something useful</span>
-            <h3>Open to web application and dashboard work</h3>
-            <p>I can contribute to Laravel products, React-based interfaces, REST APIs, and business systems that need practical engineering support.</p>
+            <span class="contact-kicker">Open to opportunities</span>
+            <h3>Available for product, dashboard, and Laravel application work</h3>
+            <p>I can contribute to Laravel products, React-based interfaces, REST APIs, and business systems that need dependable engineering support and practical delivery.</p>
             <div class="contact-simple-details">
               <div class="contact-line">
                 <i class="bi bi-envelope"></i>
