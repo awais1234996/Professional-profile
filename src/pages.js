@@ -627,11 +627,12 @@ const homePage = pageShell(`
             <a href="tel:03037932504" class="call-button">Call Now</a>
           </div>
         </div>
-      </div>
-
-      <div class="row gy-4 mt-4">
-        <div class="col-lg-12">
-          <form class="react-contact-form php-email-form">
+        <div class="contact-form-card">
+          <form class="react-contact-form php-email-form" data-endpoint="https://formsubmit.co/ajax/awaisraza030379@gmail.com">
+            <input type="hidden" name="_subject" value="New portfolio contact message from M Awais Raza website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_replyto" value="">
             <div class="row gy-3">
               <div class="col-md-6">
                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -646,6 +647,8 @@ const homePage = pageShell(`
                 <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
               </div>
               <div class="col-md-12 text-center">
+                <div class="loading">Sending message...</div>
+                <div class="error-message">Message could not be sent.</div>
                 <div class="sent-message">Your message has been sent. Thank you.</div>
                 <button type="submit">Send Message</button>
               </div>

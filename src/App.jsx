@@ -53,10 +53,61 @@ function initPageInteractions() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function handleContactSubmit(event) {
+  async function handleContactSubmit(event) {
     event.preventDefault();
-    contactForm?.querySelector('.sent-message')?.classList.add('d-block');
-    contactForm?.reset();
+
+    const loadingMessage = contactForm?.querySelector('.loading');
+    const sentMessage = contactForm?.querySelector('.sent-message');
+    const errorMessage = contactForm?.querySelector('.error-message');
+    const submitButton = contactForm?.querySelector('button[type="submit"]');
+    const endpoint = contactForm?.getAttribute('data-endpoint');
+
+    loadingMessage?.classList.remove('d-block');
+    sentMessage?.classList.remove('d-block');
+    errorMessage?.classList.remove('d-block');
+
+    if (!contactForm || !endpoint) {
+      if (errorMessage) {
+        errorMessage.textContent = 'Contact form is not configured correctly.';
+        errorMessage.classList.add('d-block');
+      }
+      return;
+    }
+
+    loadingMessage?.classList.add('d-block');
+    submitButton?.setAttribute('disabled', 'disabled');
+
+    try {
+      const formData = new FormData(contactForm);
+      const senderEmail = contactForm.querySelector('input[name="email"]')?.value?.trim();
+      if (senderEmail) {
+        formData.set('_replyto', senderEmail);
+      }
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      loadingMessage?.classList.remove('d-block');
+      sentMessage?.classList.add('d-block');
+      contactForm.reset();
+    } catch (error) {
+      loadingMessage?.classList.remove('d-block');
+      if (errorMessage) {
+        errorMessage.textContent = 'Message could not be sent right now. Please try again or email me directly at awaisraza030379@gmail.com.';
+        errorMessage.classList.add('d-block');
+      }
+      console.error(error);
+    } finally {
+      submitButton?.removeAttribute('disabled');
+    }
   }
 
   headerToggleBtn?.addEventListener('click', handleHeaderToggle);

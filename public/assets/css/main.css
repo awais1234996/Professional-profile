@@ -718,8 +718,8 @@ section,
 
 .professional-contact .contact-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 26px;
   align-items: stretch;
 }
 
@@ -838,10 +838,10 @@ section,
 }
 
 .professional-contact .contact-simple-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
-  gap: 28px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 34px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 8px;
@@ -870,6 +870,7 @@ section,
 .professional-contact .contact-simple-details {
   display: grid;
   gap: 12px;
+  margin-top: 24px;
 }
 
 .professional-contact .contact-line {
@@ -927,7 +928,9 @@ section,
   align-items: center;
   justify-content: center;
   gap: 9px;
+  align-self: flex-start;
   min-height: 50px;
+  margin-top: 22px;
   padding: 13px 18px;
   border-radius: 8px;
   color: #ffffff;
@@ -939,6 +942,23 @@ section,
 .professional-contact .call-button:hover {
   color: #ffffff;
   background: color-mix(in srgb, var(--accent-color), #000000 12%);
+}
+
+.professional-contact .contact-form-card {
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.professional-contact .contact-form-card .php-email-form {
+  width: 100%;
+  height: 100%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-color), transparent 8%), var(--surface-color)),
+    var(--surface-color);
+  box-shadow: 0 12px 34px color-mix(in srgb, var(--default-color), transparent 94%);
 }
 
 .hero h2 {
