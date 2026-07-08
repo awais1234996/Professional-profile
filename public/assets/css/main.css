@@ -2576,3 +2576,70 @@ section {
 .header::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #7dd3fc 0%, #4ade80 100%);
 }
+
+.portfolio-text-card {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%;
+}
+
+.portfolio-text-card .portfolio-text-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 320px;
+  padding: 32px 28px;
+  border-radius: 18px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.portfolio-text-card .portfolio-text-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.portfolio-text-card h4 {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.portfolio-text-card p {
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 48px 36px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+}
+
+.portfolio-placeholder.detail-placeholder {
+  min-height: 420px;
+  text-align: left;
+}
+
+.portfolio-placeholder-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
