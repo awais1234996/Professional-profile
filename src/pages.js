@@ -246,55 +246,86 @@ const projects = [
     website: "https://smartkarigar.com/",
     websiteLabel: "smartkarigar.com",
     note: "The live project is available, but local screenshots were not found in this repository."
+  },
+  {
+    route: "/n8n-automation",
+    title: "n8n AI Automation & Workflow Pipelines",
+    role: "AI Automation Specialist & Laravel Developer",
+    focus: "Autonomous AI agents, n8n multi-step pipelines, LLM integrations, and CRM syncing",
+    stack: "n8n, OpenAI / Claude API, Webhooks, Laravel AI SDK, REST APIs, PostgreSQL",
+    summary: "Designed and deployed enterprise-grade AI automation pipelines using n8n to automate lead qualification, customer intake, ERP database syncing, AI document processing, and smart multi-channel notifications.",
+    bullets: [
+      "Engineered automated n8n workflows triggered via webhooks, cron jobs, and database events.",
+      "Integrated OpenAI & Claude LLM agents with custom tool calling, memory, and vector search.",
+      "Synchronized CRM platforms, messaging bots, and internal Laravel databases with real-time error handling.",
+      "Reduced manual operational overhead by automating multi-step repetitive business workflows."
+    ],
+    note: "Production workflows integrating custom webhooks, n8n nodes, and LLM agent orchestration."
   }
 ];
 
 const homePage = pageShell(`
   <section id="hero" class="hero section dark-background professional-hero">
+    <div class="hero-video-container">
+      <video class="hero-bg-video hero-video-1 is-active" autoplay muted playsinline preload="auto">
+        <source src="/assets/video/hero-video-1.mp4" type="video/mp4">
+        <source src="/hero-video-1.mp4" type="video/mp4">
+      </video>
+      <video class="hero-bg-video hero-video-2" muted playsinline preload="auto">
+        <source src="/assets/video/hero-video-2.mp4" type="video/mp4">
+        <source src="/hero-video-2.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <span class="hero-kicker">Full Stack Developer</span>
-      <h2>M Awais Raza</h2>
-      <p class="hero-role">I design and build modern digital products with <span class="typed" data-typed-items="PHP and Laravel,Node.js and Express.js,React JS,RESTful APIs,Laravel AI SDK"></span></p>
-      <p class="hero-summary">I am a Full Stack Developer focused on building scalable, secure, and thoughtfully engineered web applications. My work brings together Laravel, Node.js, React JS, RESTful APIs, and AI-powered features to create business products that feel reliable, modern, and built to grow.</p>
-      <div class="hero-actions">
-        <a href="#portfolio" class="hero-btn primary">View Work</a>
-        <a href="#contact" class="hero-btn secondary">Contact Me</a>
-      </div>
-      <div class="hero-highlights" aria-label="Professional highlights">
-        <span>Laravel</span>
-        <span>React JS</span>
-        <span>Node.js</span>
-        <span>REST APIs</span>
-        <span>Docker</span>
+      <div class="hero-content">
+        <span class="hero-kicker"><span class="hero-kicker-dot"></span> Full Stack Laravel & n8n AI Automation</span>
+        <h2>M Awais Raza</h2>
+        <p class="hero-summary">I am a Full Stack Developer & AI Automation Specialist dedicated to building high-performance Laravel web applications and intelligent n8n AI workflows. I bridge deep backend engineering with autonomous AI agents, smart webhook pipelines, and modern React interfaces to deliver scalable, end-to-end digital solutions.</p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="hero-btn primary"><i class="bi bi-briefcase me-1"></i> View Work</a>
+          <a href="#contact" class="hero-btn secondary"><i class="bi bi-envelope me-1"></i> Contact Me</a>
+          <a href="/assets/CV.pdf" download target="_blank" class="hero-btn tertiary"><i class="bi bi-download me-1"></i> Download CV</a>
+        </div>
+        <div class="hero-highlights" aria-label="Professional highlights">
+          <span><i class="fa-brands fa-laravel me-1 text-danger"></i> Laravel</span>
+          <span><i class="bi bi-robot me-1 text-info"></i> n8n AI Automation</span>
+          <span><i class="fa-brands fa-react me-1 text-primary"></i> React JS</span>
+          <span><i class="fa-brands fa-node-js me-1 text-success"></i> Node.js</span>
+          <span><i class="bi bi-cpu me-1 text-warning"></i> AI Agents & LLMs</span>
+          <span><i class="bi bi-diagram-3 me-1 text-primary"></i> REST APIs</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
-      <h2>About</h2>
-      <p>I am a Full Stack Developer with a strong foundation in PHP, Laravel, Node.js, Express.js, React JS, MySQL, MongoDB, and Laravel AI SDK. I build web applications that balance performance, clean architecture, maintainable code, and polished user experience across business platforms, ERP systems, and modern SaaS-style products.</p>
+      <h2>About Me</h2>
+      <p>I specialize in two primary domains: building robust, scalable <strong>Laravel & Full Stack Web Applications</strong> and architecting intelligent <strong>n8n AI Workflow Automations</strong> that streamline business processes, eliminate repetitive tasks, and empower modern digital products.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 content about-content-no-image">
-          <h2>Building dependable products for business, operations, and digital growth</h2>
+          <h2>Engineering Scalable Laravel Platforms & Intelligent AI Automations</h2>
           <p class="fst-italic py-3">
-            My experience spans ERP systems, dashboards, e-commerce platforms, news portals, event management systems, library solutions, real-time chat applications, and service booking products. I enjoy shaping backend systems and responsive interfaces that are practical for teams, intuitive for users, and strong enough to support long-term product growth.
+            With solid expertise in PHP, Laravel, React JS, Node.js, and n8n Workflow Automation, I build end-to-end digital solutions. My experience ranges from complex ERP platforms, dashboards, e-commerce applications, and real-time systems to autonomous AI agents, multi-step webhook pipelines, and LLM integrations that connect software ecosystems into unified, automated engines.
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0303-7932504 | 0310-7434370</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Pillar 1:</strong> <span>Laravel & Full Stack Architecture (ERP, SaaS, APIs)</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Pillar 2:</strong> <span>n8n AI Automation (Agents, Webhooks, LLM Pipelines)</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Faisalabad, Pakistan</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/m-awais-raza-7045672a1" target="_blank" rel="noreferrer">linkedin.com/in/m-awais-raza-7045672a1</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0303-7932504 | 0310-7434370</span></li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>Laravel Applications, ERP Workflows, SaaS Products, and API-driven Systems</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>awaisraza030379@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/m-awais-raza-7045672a1" target="_blank" rel="noreferrer">linkedin.com/in/m-awais-raza-7045672a1</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>AI & Tech Stack:</strong> <span>Laravel, n8n, OpenAI/Claude, React JS, Node.js, MySQL</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Urdu, English</span></li>
               </ul>
             </div>
@@ -306,55 +337,57 @@ const homePage = pageShell(`
 
   <section id="skills" class="skills section light-background">
     <div class="container section-title" data-aos="fade-up">
-      <h2>Skills</h2>
-      <p>Core technologies from my CV include PHP, Laravel, Node.js, Express.js, MySQL, MongoDB, JavaScript, React JS, Bootstrap, Tailwind CSS, RESTful APIs, WordPress, Git, GitHub, CI/CD pipelines, Docker, and Laravel AI SDK.</p>
+      <h2>Technical Skills & Core Pillars</h2>
+      <p>My skillset is organized around two key competencies: Full Stack Laravel Engineering and n8n AI Workflow Automation.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row skills-content skills-animation">
         <div class="col-lg-6">
+          <h4 class="mb-3 text-info fw-bold"><i class="fa-brands fa-laravel me-2"></i>Full Stack & Laravel Core</h4>
           <div class="progress">
-            <span class="skill"><span>PHP and Laravel</span> <i class="val">90%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+            <span class="skill"><span>PHP and Laravel Framework</span> <i class="val">92%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>JavaScript</span> <i class="val">85%</i></span>
+            <span class="skill"><span>JavaScript & React JS</span> <i class="val">85%</i></span>
             <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>React JS</span> <i class="val">80%</i></span>
+            <span class="skill"><span>RESTful APIs & Backend Architecture</span> <i class="val">88%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="progress">
+            <span class="skill"><span>Node.js & Express.js</span> <i class="val">80%</i></span>
             <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>Node.js and Express.js</span> <i class="val">78%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div></div>
-          </div>
-          <div class="progress">
-            <span class="skill"><span>RESTful APIs</span> <i class="val">82%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div></div>
+            <span class="skill"><span>MySQL & Relational Databases</span> <i class="val">85%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
         </div>
 
         <div class="col-lg-6">
+          <h4 class="mb-3 text-success fw-bold"><i class="bi bi-robot me-2"></i>n8n & AI Automation Core</h4>
           <div class="progress">
-            <span class="skill"><span>MySQL and MongoDB</span> <i class="val">82%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div></div>
+            <span class="skill"><span>n8n Workflow Automation & Pipelines</span> <i class="val">90%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>Bootstrap and Tailwind CSS</span> <i class="val">88%</i></span>
+            <span class="skill"><span>AI Agents & LLMs (OpenAI, Claude, AI SDK)</span> <i class="val">86%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="progress">
+            <span class="skill"><span>Webhook & API Orchestration</span> <i class="val">88%</i></span>
             <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>Laravel AI SDK</span> <i class="val">75%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+            <span class="skill"><span>CRM & Database Syncing Workflows</span> <i class="val">84%</i></span>
+            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
           <div class="progress">
-            <span class="skill"><span>Git, GitHub and CI/CD</span> <i class="val">80%</i></span>
+            <span class="skill"><span>Docker, Git & CI/CD Pipelines</span> <i class="val">80%</i></span>
             <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
-          </div>
-          <div class="progress">
-            <span class="skill"><span>Docker and Deployment Workflows</span> <i class="val">72%</i></span>
-            <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div></div>
           </div>
         </div>
       </div>
@@ -444,30 +477,30 @@ const homePage = pageShell(`
   <section id="portfolio" class="portfolio section light-background">
     <div class="container section-title" data-aos="fade-up">
       <h2>Portfolio</h2>
-      <p>Selected projects from my CV, spanning ERP-oriented product work, commerce, publishing, event operations, library systems, real-time communication, and home services booking.</p>
+      <p>Selected work across my two primary pillars: Full Stack Laravel Web Applications and n8n AI Workflow Automations.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="portfolio-lead-card">
         <div>
-          <span class="portfolio-lead-kicker">Selected Work</span>
-          <h3>Applications built around real business workflows</h3>
-          <p>My work covers admin-heavy systems, customer-facing products, and practical full stack delivery using Laravel, React JS, Node.js, and API-driven architecture.</p>
+          <span class="portfolio-lead-kicker">Core Deliverables</span>
+          <h3>Engineering scalable platforms and autonomous AI workflows</h3>
+          <p>My work combines enterprise Laravel backends, modern React dashboards, and intelligent n8n automation pipelines that connect systems and eliminate manual operations.</p>
         </div>
         <div class="portfolio-lead-stats">
-          <span><strong>6+</strong> Featured projects</span>
-          <span><strong>2</strong> ERP-focused roles</span>
-          <span><strong>Laravel</strong> Core platform</span>
+          <span><strong>7+</strong> Featured projects</span>
+          <span><strong>Laravel</strong> Web Core</span>
+          <span><strong>n8n</strong> AI Automation</span>
         </div>
       </div>
 
       <div class="project-summary-grid">
-        <div class="project-summary-item"><h4>Apollo ERP and Wapda City Work</h4><p>Laravel-based business systems, dashboards, and workflow-focused development.</p></div>
-        <div class="project-summary-item"><h4>E-commerce</h4><p>Catalog browsing, product organization, orders, and checkout flows.</p></div>
-        <div class="project-summary-item"><h4>News Management</h4><p>Admin publishing tools with a public-facing content portal.</p></div>
+        <div class="project-summary-item"><h4>n8n AI Automation</h4><p>Multi-step pipelines, autonomous LLM agents, webhooks, and CRM data syncing.</p></div>
+        <div class="project-summary-item"><h4>Apollo ERP & Wapda City</h4><p>Laravel-based business systems, dashboards, and operational workflows.</p></div>
+        <div class="project-summary-item"><h4>E-commerce Application</h4><p>Catalog browsing, product organization, orders, and checkout flows.</p></div>
+        <div class="project-summary-item"><h4>News Management System</h4><p>Admin publishing tools with a public-facing content portal.</p></div>
         <div class="project-summary-item"><h4>Event Management</h4><p>Bookings, planners, volunteers, and user participation management.</p></div>
-        <div class="project-summary-item"><h4>Library Management</h4><p>Borrowing records, catalog administration, and operational tracking.</p></div>
-        <div class="project-summary-item"><h4>ChatApp and SmartKarigar</h4><p>Real-time messaging and services booking product experiences.</p></div>
+        <div class="project-summary-item"><h4>ChatApp & SmartKarigar</h4><p>Real-time messaging with Reverb and home services booking platform.</p></div>
       </div>
     </div>
 
@@ -476,6 +509,7 @@ const homePage = pageShell(`
         <div class="filter-slider" data-aos="fade-up" data-aos-delay="100">
           <ul class="portfolio-filters isotope-filters slide-tabs">
             <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-automation">n8n AI Automation</li>
             <li data-filter=".filter-event">Event Management</li>
             <li data-filter=".filter-commerce">E-commerce</li>
             <li data-filter=".filter-news">News Management</li>
@@ -485,6 +519,20 @@ const homePage = pageShell(`
         </div>
 
         <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automation">
+            <div class="portfolio-content portfolio-text-card h-100">
+              <div class="portfolio-text-card-body">
+                <span class="portfolio-text-tag text-info"><i class="bi bi-robot me-1"></i> n8n • OpenAI • Webhooks</span>
+                <h4>n8n AI Automation & Workflow Pipelines</h4>
+                <p>Engineered multi-step AI workflows integrating n8n, OpenAI/Claude, webhooks, and Laravel databases to automate lead processing, CRM syncing, and operational intelligence.</p>
+                <div class="portfolio-text-actions">
+                  <a href="/n8n-automation" class="portfolio-inline-link">View Automation Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <a href="/n8n-automation" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-event">
             <div class="portfolio-content h-100">
               <img src="/assets/img/portfolio/Event dashboard.png" class="img-fluid" alt="Event management platform">
@@ -567,30 +615,37 @@ const homePage = pageShell(`
   <section id="services" class="services section">
     <div class="container section-title" data-aos="fade-up">
       <h2>Services</h2>
-      <p>I help businesses build reliable web products, SaaS-style platforms, admin systems, APIs, and responsive interfaces using the same stack highlighted in my CV.</p>
+      <p>Specialized engineering services focused on Full Stack Laravel Development and n8n AI Automation.</p>
     </div>
 
     <div class="container">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-code-slash"></i></div>
-            <h3>Laravel Development</h3>
-            <p>Secure backend systems, dashboards, ERP modules, admin panels, and application architecture built for long-term maintainability.</p>
+            <h3>Full Stack Laravel Development</h3>
+            <p>High-performance backend systems, ERP architectures, SaaS platforms, admin panels, and database-backed web applications built for scale and maintainability.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-robot"></i></div>
+            <h3>n8n AI & Workflow Automation</h3>
+            <p>Autonomous AI agents, automated multi-app pipelines, webhook triggers, CRM/database synchronization, and LLM integrations (OpenAI/Claude) to eliminate manual tasks.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-window"></i></div>
-            <h3>Frontend Interfaces</h3>
-            <p>Responsive interfaces with React JS, Bootstrap, Tailwind CSS, and user-friendly interaction flows for modern products.</p>
+            <h3>React JS & Frontend Dashboards</h3>
+            <p>Responsive, interactive interfaces with React JS, Bootstrap, and Tailwind CSS designed for real-time user experiences and business control panels.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="service-item position-relative">
             <div class="icon"><i class="bi bi-diagram-3"></i></div>
-            <h3>REST APIs and Integrations</h3>
-            <p>Structured backend services, integrations, and maintainable API layers that support modern web applications.</p>
+            <h3>REST APIs & Webhook Orchestration</h3>
+            <p>Robust API layers, third-party service connections, webhook integrations, and reliable microservice architecture.</p>
           </div>
         </div>
       </div>
@@ -599,61 +654,134 @@ const homePage = pageShell(`
 
   <section id="contact" class="contact section professional-contact">
     <div class="container section-title" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>Available for Laravel, full stack, ERP, SaaS, dashboard, and product development opportunities.</p>
+      <h2>Get In Touch</h2>
+      <p>Have a project in mind or looking to automate your workflows? Let's discuss how we can build high-impact solutions together.</p>
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="contact-shell">
-        <div class="contact-simple-card">
-          <div class="contact-simple-content">
-            <span class="contact-kicker">Open to opportunities</span>
-            <h3>Available for product, dashboard, and Laravel application work</h3>
-            <p>I can contribute to Laravel products, React-based interfaces, REST APIs, and business systems that need dependable engineering support and practical delivery.</p>
-            <div class="contact-simple-details">
-              <div class="contact-line">
-                <i class="bi bi-envelope"></i>
-                <span><strong>Email</strong><small>awaisraza030379@gmail.com</small></span>
+      <div class="contact-shell-pro">
+        <div class="row g-4 align-items-stretch">
+
+          <!-- Left Column: Contact Channels & Status -->
+          <div class="col-lg-5">
+            <div class="contact-info-panel h-100">
+              <div class="contact-panel-header">
+                <span class="contact-status-badge">
+                  <span class="status-dot"></span> Available for Projects & Contracts
+                </span>
+                <h3>Let's Build Something Exceptional</h3>
+                <p>Specialized in full stack Laravel applications, ERP systems, and intelligent n8n AI workflow automations. Feel free to reach out directly through any of the channels below.</p>
               </div>
-              <div class="contact-line">
-                <i class="bi bi-telephone"></i>
-                <span><strong>Phone</strong><small>0303-7932504 | 0310-7434370</small></span>
+
+              <div class="contact-cards-list">
+                <a href="mailto:awaisraza030379@gmail.com" class="contact-item-card">
+                  <div class="contact-icon-box email-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <span class="contact-label">Email Address</span>
+                    <span class="contact-value">awaisraza030379@gmail.com</span>
+                  </div>
+                  <i class="bi bi-arrow-up-right contact-arrow"></i>
+                </a>
+
+                <a href="tel:03037932504" class="contact-item-card">
+                  <div class="contact-icon-box phone-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <span class="contact-label">Call / WhatsApp</span>
+                    <span class="contact-value">0303-7932504 • 0310-7434370</span>
+                  </div>
+                  <i class="bi bi-arrow-up-right contact-arrow"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/m-awais-raza-7045672a1" target="_blank" rel="noreferrer" class="contact-item-card">
+                  <div class="contact-icon-box linkedin-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <span class="contact-label">LinkedIn Profile</span>
+                    <span class="contact-value">linkedin.com/in/m-awais-raza-7045672a1</span>
+                  </div>
+                  <i class="bi bi-arrow-up-right contact-arrow"></i>
+                </a>
+
+                <div class="contact-item-card location-card">
+                  <div class="contact-icon-box location-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Faisalabad, Pakistan • Remote Worldwide</span>
+                  </div>
+                </div>
               </div>
-              <div class="contact-line">
-                <i class="bi bi-geo-alt"></i>
-                <span><strong>Location</strong><small>Faisalabad, Pakistan</small></span>
+
+              <div class="contact-trust-badge">
+                <i class="bi bi-lightning-charge-fill text-warning"></i>
+                <span>Fast response guarantee • Typically within 24 hours</span>
               </div>
             </div>
-            <a href="tel:03037932504" class="call-button">Call Now</a>
           </div>
-        </div>
-        <div class="contact-form-card">
-          <form class="react-contact-form php-email-form" data-endpoint="https://formsubmit.co/ajax/awaisraza030379@gmail.com">
-            <input type="hidden" name="_subject" value="New portfolio contact message from M Awais Raza website">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_replyto" value="">
-            <div class="row gy-3">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="col-lg-7">
+            <div class="contact-form-panel h-100">
+              <div class="form-panel-header">
+                <h3>Send a Direct Message</h3>
+                <p>Fill out the form below and I will get back to you promptly.</p>
               </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-              </div>
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-              </div>
-              <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="loading">Sending message...</div>
-                <div class="error-message">Message could not be sent.</div>
-                <div class="sent-message">Your message has been sent. Thank you.</div>
-                <button type="submit">Send Message</button>
-              </div>
+
+              <form class="react-contact-form contact-form-pro" data-endpoint="https://formsubmit.co/ajax/awaisraza030379@gmail.com">
+                <input type="hidden" name="_subject" value="New Portfolio Inquiry - M Awais Raza">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_replyto" value="">
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group-pro">
+                      <label class="form-label-pro"><i class="bi bi-person me-1"></i> Your Name</label>
+                      <input type="text" name="name" class="form-control-pro" placeholder="e.g. John Doe" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group-pro">
+                      <label class="form-label-pro"><i class="bi bi-envelope me-1"></i> Email Address</label>
+                      <input type="email" name="email" class="form-control-pro" placeholder="e.g. john@example.com" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group-pro">
+                      <label class="form-label-pro"><i class="bi bi-tag me-1"></i> Project Type / Subject</label>
+                      <input type="text" name="subject" class="form-control-pro" placeholder="e.g. Laravel App / n8n AI Automation / Consultation" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group-pro">
+                      <label class="form-label-pro"><i class="bi bi-chat-left-text me-1"></i> Your Message</label>
+                      <textarea class="form-control-pro" name="message" rows="5" placeholder="Tell me about your project requirements, tech stack, or workflow goals..." required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-feedback-slot">
+                      <div class="sent-message d-none"><i class="bi bi-check-circle-fill text-success me-2"></i> Your message has been sent successfully! Thank you.</div>
+                      <div class="error-message d-none"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i> Message could not be sent. Please try again.</div>
+                    </div>
+                    <button type="submit" class="btn-submit-pro">
+                      <span>Send Message</span> <i class="bi bi-send-fill ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
+
         </div>
       </div>
     </div>
