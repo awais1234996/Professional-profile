@@ -267,11 +267,11 @@ const projects = [
 const homePage = pageShell(`
   <section id="hero" class="hero section dark-background professional-hero">
     <div class="hero-video-container">
-      <video class="hero-bg-video hero-video-1 is-active" autoplay muted playsinline preload="auto">
+      <video class="hero-bg-video hero-video-1 is-active" autoplay muted playsinline webkit-playsinline preload="auto">
         <source src="/assets/video/hero-video-1.mp4" type="video/mp4">
         <source src="/hero-video-1.mp4" type="video/mp4">
       </video>
-      <video class="hero-bg-video hero-video-2" muted playsinline preload="auto">
+      <video class="hero-bg-video hero-video-2" muted playsinline webkit-playsinline preload="auto">
         <source src="/assets/video/hero-video-2.mp4" type="video/mp4">
         <source src="/hero-video-2.mp4" type="video/mp4">
       </video>

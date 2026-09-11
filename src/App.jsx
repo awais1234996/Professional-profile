@@ -197,6 +197,16 @@ function initPageInteractions() {
 
     v1.addEventListener('ended', onV1Ended);
     v2.addEventListener('ended', onV2Ended);
+
+    const ensureVideoPlaying = () => {
+      if (v1 && v1.classList.contains('is-active') && v1.paused) {
+        v1.play().catch(() => {});
+      } else if (v2 && v2.classList.contains('is-active') && v2.paused) {
+        v2.play().catch(() => {});
+      }
+    };
+    window.addEventListener('touchstart', ensureVideoPlaying, { once: true, passive: true });
+    window.addEventListener('scroll', ensureVideoPlaying, { once: true, passive: true });
   } else if (v1) {
     v1.classList.add('is-active');
     v1.setAttribute('loop', 'loop');
