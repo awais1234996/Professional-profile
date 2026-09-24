@@ -296,7 +296,7 @@ const homePage = pageShell(`
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="hero-content">
-        <span class="hero-kicker"><span class="hero-kicker-dot"></span> Full Stack Developer · AI Automation · Laravel · React · n8n</span>
+        <span class="hero-kicker"><span class="hero-kicker-dot"></span> Full Stack Developer &amp; AI Automation Specialist</span>
         <h2>M Awais Raza</h2>
         <p class="hero-summary">I am a Full Stack Developer & AI Automation Specialist dedicated to building high-performance Laravel web applications and intelligent n8n AI workflows. I bridge deep backend engineering with autonomous AI agents, smart webhook pipelines, and modern React interfaces to deliver scalable, end-to-end digital solutions.</p>
         <div class="hero-actions">
