@@ -16,10 +16,22 @@ const sharedHeader = `
       </a>
     </div>
 
-    <div class="mb-5 text-center">
+    <div class="mb-4 text-center">
       <a href="https://www.linkedin.com/in/m-awais-raza-7045672a1" target="_blank" class="py-2 px-3 fw-bold rounded-pill" id="btn-cv" rel="noreferrer">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
+    </div>
+
+    <div class="theme-switch-wrapper mb-4 text-center">
+      <button type="button" class="theme-toggle-btn" id="theme-toggle-sidebar" aria-label="Toggle theme">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb">
+            <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+            <i class="bi bi-sun-fill theme-icon-light"></i>
+          </span>
+        </span>
+        <span class="theme-toggle-label">Dark Mode</span>
+      </button>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -47,6 +59,11 @@ const sharedFooter = `
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
+
+  <button type="button" class="floating-theme-toggle" id="theme-toggle-floating" aria-label="Toggle theme" title="Toggle theme">
+    <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+    <i class="bi bi-sun-fill theme-icon-light"></i>
+  </button>
 
   <div id="preloader"></div>
 `;

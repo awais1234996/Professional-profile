@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('site-theme') || 'dark';
+          document.documentElement.setAttribute('data-theme', saved);
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M Awais Raza | Laravel Developer & AI Automation Specialist</title>
     <meta name="description" content="M Awais Raza - Full Stack Laravel Developer & AI Automation Specialist specializing in Laravel, n8n AI Workflows, Autonomous AI Agents, React JS, RESTful APIs, and ERP systems." />

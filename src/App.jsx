@@ -17,14 +17,50 @@ function navigate(path) {
   window.dispatchEvent(new Event('popstate'));
 }
 
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  try {
+    localStorage.setItem('site-theme', theme);
+  } catch (e) {}
+
+  document.querySelectorAll('#theme-toggle-sidebar').forEach((btn) => {
+    btn.setAttribute('data-theme', theme);
+    const label = btn.querySelector('.theme-toggle-label');
+    if (label) {
+      label.textContent = theme === 'light' ? 'Light Mode' : 'Dark Mode';
+    }
+  });
+
+  document.querySelectorAll('#theme-toggle-floating').forEach((btn) => {
+    btn.setAttribute('data-theme', theme);
+    btn.setAttribute('title', theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+  });
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || localStorage.getItem('site-theme') || 'dark';
+  const next = current === 'light' ? 'dark' : 'light';
+  applyTheme(next);
+}
+
 function initPageInteractions() {
   const header = document.querySelector('#header');
   const headerToggleBtn = document.querySelector('.header-toggle');
   const scrollTop = document.querySelector('.scroll-top');
   const contactForm = document.querySelector('.react-contact-form');
   const preloader = document.querySelector('#preloader');
+  const sidebarToggle = document.querySelector('#theme-toggle-sidebar');
+  const floatingToggle = document.querySelector('#theme-toggle-floating');
 
   preloader?.remove();
+
+  const currentTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('site-theme') || 'dark';
+  applyTheme(currentTheme);
+
+  function handleThemeClick(event) {
+    event.preventDefault();
+    toggleTheme();
+  }
 
   function headerToggle() {
     if (!header || !headerToggleBtn) return;
@@ -125,6 +161,8 @@ function initPageInteractions() {
   }
 
   headerToggleBtn?.addEventListener('click', handleHeaderToggle);
+  sidebarToggle?.addEventListener('click', handleThemeClick);
+  floatingToggle?.addEventListener('click', handleThemeClick);
   document.querySelectorAll('#navmenu a').forEach((link) => {
     link.addEventListener('click', handleNavClick);
   });
@@ -229,6 +267,8 @@ function initPageInteractions() {
     if (v1 && onV1Ended) v1.removeEventListener('ended', onV1Ended);
     if (v2 && onV2Ended) v2.removeEventListener('ended', onV2Ended);
     headerToggleBtn?.removeEventListener('click', handleHeaderToggle);
+    sidebarToggle?.removeEventListener('click', handleThemeClick);
+    floatingToggle?.removeEventListener('click', handleThemeClick);
     document.querySelectorAll('#navmenu a').forEach((link) => {
       link.removeEventListener('click', handleNavClick);
     });
