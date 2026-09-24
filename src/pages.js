@@ -248,7 +248,7 @@ const projects = [
     note: "No local screenshots for ChatApp were found in this repository."
   },
   {
-    route: "/smartkarigar-details",
+    route: "/ustadkarigar-details",
     title: "Home Services Booking Platform",
     role: "Full Stack Developer",
     focus: "Service listing, booking management, and user-provider communication",
@@ -260,8 +260,8 @@ const projects = [
       "Covered skilled categories such as electricians, plumbers, and technicians.",
       "Delivered a practical booking experience across web and mobile-oriented interfaces."
     ],
-    website: "https://smartkarigar.com/",
-    websiteLabel: "smartkarigar.com",
+    website: "https://ustadkarigar.com/",
+    websiteLabel: "ustadkarigar.com",
     note: "The live project is available, but local screenshots were not found in this repository."
   },
   {
@@ -296,7 +296,7 @@ const homePage = pageShell(`
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="hero-content">
-        <span class="hero-kicker"><span class="hero-kicker-dot"></span> Full Stack Laravel & n8n AI Automation</span>
+        <span class="hero-kicker"><span class="hero-kicker-dot"></span> Full Stack Developer · AI Automation · Laravel · React · n8n</span>
         <h2>M Awais Raza</h2>
         <p class="hero-summary">I am a Full Stack Developer & AI Automation Specialist dedicated to building high-performance Laravel web applications and intelligent n8n AI workflows. I bridge deep backend engineering with autonomous AI agents, smart webhook pipelines, and modern React interfaces to deliver scalable, end-to-end digital solutions.</p>
         <div class="hero-actions">
@@ -512,12 +512,48 @@ const homePage = pageShell(`
       </div>
 
       <div class="project-summary-grid">
-        <div class="project-summary-item"><h4>n8n AI Automation</h4><p>Multi-step pipelines, autonomous LLM agents, webhooks, and CRM data syncing.</p></div>
-        <div class="project-summary-item"><h4>Apollo ERP & Wapda City</h4><p>Laravel-based business systems, dashboards, and operational workflows.</p></div>
-        <div class="project-summary-item"><h4>E-commerce Application</h4><p>Catalog browsing, product organization, orders, and checkout flows.</p></div>
-        <div class="project-summary-item"><h4>News Management System</h4><p>Admin publishing tools with a public-facing content portal.</p></div>
-        <div class="project-summary-item"><h4>Event Management</h4><p>Bookings, planners, volunteers, and user participation management.</p></div>
-        <div class="project-summary-item"><h4>ChatApp & SmartKarigar</h4><p>Real-time messaging with Reverb and home services booking platform.</p></div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-robot"></i></span>
+            <h4>n8n AI Automation</h4>
+          </div>
+          <p>Multi-step pipelines, autonomous LLM agents, webhooks, and CRM data syncing.</p>
+        </div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-buildings"></i></span>
+            <h4>Apollo ERP & Wapda City</h4>
+          </div>
+          <p>Laravel-based business systems, dashboards, and operational workflows.</p>
+        </div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-cart3"></i></span>
+            <h4>E-commerce Application</h4>
+          </div>
+          <p>Catalog browsing, product organization, orders, and checkout flows.</p>
+        </div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-newspaper"></i></span>
+            <h4>News Management System</h4>
+          </div>
+          <p>Admin publishing tools with a public-facing content portal.</p>
+        </div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-calendar-event"></i></span>
+            <h4>Event Management</h4>
+          </div>
+          <p>Bookings, planners, volunteers, and user participation management.</p>
+        </div>
+        <div class="project-summary-item">
+          <div class="project-summary-header">
+            <span class="project-summary-icon"><i class="bi bi-chat-dots"></i></span>
+            <h4>ChatApp & UstadKarigar</h4>
+          </div>
+          <p>Real-time messaging with Reverb and home services booking platform.</p>
+        </div>
       </div>
     </div>
 
@@ -604,8 +640,10 @@ const homePage = pageShell(`
                 <span class="portfolio-text-tag">Laravel Reverb</span>
                 <h4>ChatApp</h4>
                 <p>Real-time messaging experience built for instant user communication and live conversations.</p>
-                <span class="portfolio-card-note">No local screenshots found in this repo yet.</span>
-                <a href="/chatapp-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <div class="portfolio-text-actions">
+                  <span class="portfolio-card-note"><i class="bi bi-image me-1"></i>No local screenshots in this repo yet.</span>
+                  <a href="/chatapp-details" title="More Details" class="portfolio-inline-link ms-auto">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -617,10 +655,9 @@ const homePage = pageShell(`
                 <h4>Home Services Booking Platform</h4>
                 <p>Users can hire electricians, plumbers, and technicians through service discovery, booking, and communication flows.</p>
                 <div class="portfolio-text-actions">
-                  <a href="https://smartkarigar.com/" target="_blank" rel="noreferrer" class="portfolio-inline-link">Visit Live Site</a>
-                  <span class="portfolio-card-note">Live project available, local screenshots missing.</span>
+                  <a href="https://ustadkarigar.com/" target="_blank" rel="noreferrer" class="portfolio-inline-link">Visit Live Site <i class="bi bi-box-arrow-up-right"></i></a>
+                  <a href="/ustadkarigar-details" title="More Details" class="portfolio-inline-link ms-auto" style="font-size:13px;opacity:0.75;">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
-                <a href="/smartkarigar-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div>
